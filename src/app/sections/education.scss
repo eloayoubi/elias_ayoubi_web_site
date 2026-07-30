@@ -1,0 +1,32 @@
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(16rem, 100%), 1fr));
+  gap: 1.25rem;
+}
+
+.education-card {
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+}
+
+.education-icon {
+  font-size: 2.2rem;
+  width: 2.2rem;
+  height: 2.2rem;
+  color: var(--mat-sys-primary);
+}
+
+.education-kind {
+  margin: 0;
+  font: var(--mat-sys-label-medium);
+  color: var(--mat-sys-on-surface-variant);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.education-title {
+  margin: 0.15rem 0 0;
+  font: var(--mat-sys-title-medium);
+}

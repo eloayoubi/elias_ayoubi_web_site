@@ -1,0 +1,57 @@
+<section id="projekte" class="section-container">
+  <h2 class="section-title" appReveal>Projekte</h2>
+  <p class="section-subtitle" appReveal [revealDelay]="80">
+    Ausgewählte Projekte aus meiner detaillierten Projekthistorie – von Banking-Apps bis Blockchain.
+  </p>
+
+  <mat-chip-listbox
+    class="filter-bar"
+    aria-label="Projekte nach Kategorie filtern"
+    appReveal
+    [revealDelay]="140"
+    hideSingleSelectionIndicator="false"
+  >
+    @for (filter of filters; track filter) {
+      <mat-chip-option
+        [selected]="activeFilter() === filter"
+        (selectionChange)="$event.selected && setFilter(filter)"
+      >
+        {{ filter }}
+      </mat-chip-option>
+    }
+  </mat-chip-listbox>
+
+  <div class="projects-grid">
+    @for (project of projects(); track project.id; let i = $index) {
+      <mat-card appearance="outlined" class="project-card" [class.featured]="project.featured" appReveal [revealDelay]="(i % 3) * 100">
+        <mat-card-header>
+          <div mat-card-avatar class="project-avatar" aria-hidden="true">
+            <mat-icon>{{ categoryIcons[project.category] }}</mat-icon>
+          </div>
+          <mat-card-title>{{ project.title }}</mat-card-title>
+          <mat-card-subtitle>{{ project.client }} · {{ project.period }}</mat-card-subtitle>
+        </mat-card-header>
+
+        <mat-card-content>
+          <p class="project-role">{{ project.role }}</p>
+          <p class="project-summary">{{ project.summary }}</p>
+          <div class="tech-chips" aria-label="Eingesetzte Technologien">
+            @for (tech of project.technologies.slice(0, 6); track tech) {
+              <span class="tech-chip">{{ tech }}</span>
+            }
+            @if (project.technologies.length > 6) {
+              <span class="tech-chip tech-chip--more">+{{ project.technologies.length - 6 }}</span>
+            }
+          </div>
+        </mat-card-content>
+
+        <mat-card-actions>
+          <button matButton (click)="openDetails(project)">
+            <mat-icon aria-hidden="true">read_more</mat-icon>
+            Details ansehen
+          </button>
+        </mat-card-actions>
+      </mat-card>
+    }
+  </div>
+</section>

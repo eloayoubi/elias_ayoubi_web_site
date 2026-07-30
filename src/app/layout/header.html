@@ -1,0 +1,39 @@
+<a class="skip-link" href="#ueber-mich">Zum Inhalt springen</a>
+
+<mat-toolbar class="header-toolbar">
+  <button matButton class="brand" (click)="scrollTo('start')" aria-label="Zum Seitenanfang">
+    <span class="brand-mark" aria-hidden="true">EA</span>
+    <span class="brand-name">Elias Ayoubi</span>
+  </button>
+
+  <span class="spacer"></span>
+
+  <nav class="desktop-nav" aria-label="Hauptnavigation">
+    @for (link of links; track link.fragment) {
+      <button matButton (click)="scrollTo(link.fragment)">{{ link.label }}</button>
+    }
+  </nav>
+
+  <button
+    matIconButton
+    (click)="theme.toggle()"
+    [attr.aria-label]="theme.mode() === 'dark' ? 'Helles Design aktivieren' : 'Dunkles Design aktivieren'"
+  >
+    <mat-icon aria-hidden="true">{{ theme.mode() === 'dark' ? 'light_mode' : 'dark_mode' }}</mat-icon>
+  </button>
+
+  <button
+    matIconButton
+    class="mobile-menu-button"
+    [matMenuTriggerFor]="mobileMenu"
+    aria-label="Navigationsmenü öffnen"
+  >
+    <mat-icon aria-hidden="true">menu</mat-icon>
+  </button>
+
+  <mat-menu #mobileMenu="matMenu">
+    @for (link of links; track link.fragment) {
+      <button mat-menu-item (click)="scrollTo(link.fragment)">{{ link.label }}</button>
+    }
+  </mat-menu>
+</mat-toolbar>

@@ -1,0 +1,15 @@
+<section id="bildung" class="section-container">
+  <h2 class="section-title" appReveal>Bildung & Zertifikate</h2>
+
+  <div class="education-grid">
+    @for (entry of resume.education; track entry.title; let i = $index) {
+      <mat-card appearance="outlined" class="education-card" appReveal [revealDelay]="i * 120">
+        <mat-icon class="education-icon" aria-hidden="true">{{ entry.icon }}</mat-icon>
+        <div>
+          <p class="education-kind">{{ entry.kind }}</p>
+          <h3 class="education-title">{{ entry.title }}</h3>
+        </div>
+      </mat-card>
+    }
+  </div>
+</section>

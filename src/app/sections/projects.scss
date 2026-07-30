@@ -1,0 +1,81 @@
+.filter-bar {
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(21rem, 100%), 1fr));
+  gap: 1.25rem;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  transition: transform 200ms ease, box-shadow 200ms ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--mat-sys-level3);
+  }
+
+  &.featured {
+    border-color: color-mix(in srgb, var(--mat-sys-primary) 45%, var(--mat-sys-outline-variant));
+  }
+
+  mat-card-content {
+    flex: 1;
+  }
+}
+
+.project-avatar {
+  display: grid;
+  place-items: center;
+  background: color-mix(in srgb, var(--mat-sys-primary) 14%, transparent);
+  border-radius: 50%;
+
+  mat-icon {
+    color: var(--mat-sys-primary);
+  }
+}
+
+.project-role {
+  font: var(--mat-sys-label-large);
+  color: var(--mat-sys-primary);
+  margin: 0.25rem 0 0.5rem;
+}
+
+.project-summary {
+  color: var(--mat-sys-on-surface-variant);
+  line-height: 1.6;
+}
+
+.tech-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.75rem;
+}
+
+.tech-chip {
+  font: var(--mat-sys-label-small);
+  padding: 0.25rem 0.6rem;
+  border-radius: 1rem;
+  background: var(--mat-sys-surface-container-high);
+  color: var(--mat-sys-on-surface-variant);
+  border: 1px solid var(--mat-sys-outline-variant);
+
+  &--more {
+    background: transparent;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-card {
+    transition: none;
+
+    &:hover {
+      transform: none;
+    }
+  }
+}

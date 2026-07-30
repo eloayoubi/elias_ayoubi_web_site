@@ -1,0 +1,24 @@
+<section id="skills" class="section-container">
+  <h2 class="section-title" appReveal>Skills & Tech-Stack</h2>
+  <p class="section-subtitle" appReveal [revealDelay]="80">
+    Mein Werkzeugkasten – gewachsen in acht Jahren Produktentwicklung.
+  </p>
+
+  <div class="skills-grid">
+    @for (group of resume.skillGroups; track group.name; let i = $index) {
+      <mat-card appearance="outlined" class="skill-card" appReveal [revealDelay]="(i % 3) * 120">
+        <mat-card-header>
+          <mat-icon mat-card-avatar class="skill-icon" aria-hidden="true">{{ group.icon }}</mat-icon>
+          <mat-card-title>{{ group.name }}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <mat-chip-set [attr.aria-label]="group.name">
+            @for (skill of group.skills; track skill) {
+              <mat-chip disableRipple>{{ skill }}</mat-chip>
+            }
+          </mat-chip-set>
+        </mat-card-content>
+      </mat-card>
+    }
+  </div>
+</section>

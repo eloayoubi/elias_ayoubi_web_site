@@ -1,0 +1,39 @@
+<section id="kontakt" class="section-container">
+  <mat-card class="contact-card" appReveal>
+    <div class="contact-inner">
+      <div class="contact-text">
+        <h2 class="section-title">Lassen Sie uns sprechen!</h2>
+        <p>
+          Sie suchen Verstärkung für Ihre mobile App, ein barrierefreies digitales Produkt
+          oder einen erfahrenen IT-Berater? Ich freue mich auf Ihre Nachricht.
+        </p>
+
+        <ul class="contact-list">
+          <li>
+            <mat-icon aria-hidden="true">mail</mat-icon>
+            <a [href]="mailHref">{{ resume.contact.email }}</a>
+          </li>
+          <li>
+            <mat-icon aria-hidden="true">call</mat-icon>
+            <a [href]="telHref">{{ resume.contact.phone }}</a>
+          </li>
+          <li>
+            <mat-icon aria-hidden="true">location_on</mat-icon>
+            <span>{{ resume.contact.location }}</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="contact-actions">
+        <a matButton="filled" [href]="mailHref">
+          <mat-icon aria-hidden="true">send</mat-icon>
+          E-Mail schreiben
+        </a>
+        <a matButton="outlined" [href]="telHref">
+          <mat-icon aria-hidden="true">call</mat-icon>
+          Anrufen
+        </a>
+      </div>
+    </div>
+  </mat-card>
+</section>

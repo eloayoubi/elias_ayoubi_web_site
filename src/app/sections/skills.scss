@@ -1,0 +1,21 @@
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(20rem, 100%), 1fr));
+  gap: 1.25rem;
+}
+
+.skill-card {
+  height: 100%;
+}
+
+.skill-icon {
+  display: grid;
+  place-items: center;
+  color: var(--mat-sys-primary);
+  background: color-mix(in srgb, var(--mat-sys-primary) 14%, transparent);
+  border-radius: 50%;
+}
+
+mat-chip-set {
+  margin-top: 0.25rem;
+}

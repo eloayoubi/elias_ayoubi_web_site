@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="de" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <title>Elias Ayoubi – Senior IT-Berater & Lead Flutter Developer</title>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Portfolio von Elias Ayoubi aus Darmstadt: Lead Flutter Developer, Senior IT-Berater und Experte für digitale Barrierefreiheit. 8+ Jahre Erfahrung mit Banking-Apps für Fidelity, Union Investment, VisualVest und GLS Bank."
+    />
+    <meta name="author" content="Elias Ayoubi" />
+    <meta property="og:title" content="Elias Ayoubi – Senior IT-Berater & Lead Flutter Developer" />
+    <meta
+      property="og:description"
+      content="Mobile Banking-Apps mit Flutter, barrierefreie digitale Produkte und agile Produktentwicklung."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <script>
+      // Theme vor dem ersten Rendern setzen, um einen Farbschema-Flash zu vermeiden.
+      (function () {
+        try {
+          var stored = localStorage.getItem('ea-portfolio-theme');
+          var dark = stored === 'dark' || (!stored && matchMedia('(prefers-color-scheme: dark)').matches);
+          document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <app-root></app-root>
+  </body>
+</html>

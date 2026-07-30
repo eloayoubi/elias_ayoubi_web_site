@@ -1,0 +1,29 @@
+<section id="ueber-mich" class="section-container">
+  <h2 class="section-title" appReveal>Über mich</h2>
+
+  <div class="about-grid">
+    <div class="about-text" appReveal [revealDelay]="100">
+      <p class="about-lead">{{ resume.aboutIntro }}</p>
+      @for (paragraph of resume.about; track $index) {
+        <p>{{ paragraph }}</p>
+      }
+    </div>
+
+    <mat-card class="about-aside" appearance="outlined" appReveal [revealDelay]="220">
+      <mat-card-header>
+        <mat-icon mat-card-avatar aria-hidden="true" class="aside-icon">translate</mat-icon>
+        <mat-card-title>Sprachen</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <ul class="language-list">
+          @for (lang of resume.languages; track lang.name) {
+            <li>
+              <span class="language-name">{{ lang.name }}</span>
+              <span class="language-level">{{ lang.level }}</span>
+            </li>
+          }
+        </ul>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</section>

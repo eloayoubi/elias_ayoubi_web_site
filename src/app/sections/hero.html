@@ -1,0 +1,35 @@
+<section id="start" class="hero">
+  <div class="hero-inner section-container">
+    <p class="hero-greeting" appReveal>Hallo, ich bin</p>
+    <h1 class="hero-name" appReveal [revealDelay]="80">{{ resume.name }}</h1>
+
+    <p class="hero-tagline" appReveal [revealDelay]="160" aria-label="Senior IT-Berater, Lead Flutter Developer, UX/UI-Designer">
+      <span aria-hidden="true">{{ typedText() }}<span class="caret"></span></span>
+    </p>
+
+    <p class="hero-intro" appReveal [revealDelay]="240">
+      {{ resume.aboutIntro }} Spezialisiert auf mobile Banking-Apps mit Flutter,
+      barrierefreie digitale Produkte und agile Produktentwicklung – aus Darmstadt.
+    </p>
+
+    <div class="hero-actions" appReveal [revealDelay]="320">
+      <button matButton="filled" (click)="scrollTo('kontakt')">
+        <mat-icon aria-hidden="true">mail</mat-icon>
+        Kontakt aufnehmen
+      </button>
+      <button matButton="outlined" (click)="scrollTo('projekte')">
+        <mat-icon aria-hidden="true">work</mat-icon>
+        Projekte ansehen
+      </button>
+    </div>
+
+    <dl class="hero-stats" appReveal [revealDelay]="420">
+      @for (stat of resume.stats; track stat.label) {
+        <div class="stat">
+          <dt>{{ stat.label }}</dt>
+          <dd>{{ stat.value }}</dd>
+        </div>
+      }
+    </dl>
+  </div>
+</section>

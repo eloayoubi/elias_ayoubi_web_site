@@ -1,0 +1,26 @@
+<section id="werdegang" class="section-container">
+  <h2 class="section-title" appReveal>Werdegang</h2>
+  <p class="section-subtitle" appReveal [revealDelay]="80">
+    Acht Jahre Softwareentwicklung – von Fullstack über IoT bis zu mobilen Banking-Apps.
+  </p>
+
+  <ol class="timeline" aria-label="Beruflicher Werdegang">
+    @for (entry of resume.experience; track entry.company + entry.period; let i = $index) {
+      <li class="timeline-item" appReveal [revealDelay]="(i % 3) * 120">
+        <div class="timeline-marker" aria-hidden="true"></div>
+        <mat-card appearance="outlined" class="timeline-card">
+          <mat-card-header>
+            <mat-card-title>{{ entry.role }}</mat-card-title>
+            <mat-card-subtitle>
+              <span class="company">{{ entry.company }}</span>
+              <span class="period">{{ entry.period }}</span>
+            </mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content>
+            <p>{{ entry.summary }}</p>
+          </mat-card-content>
+        </mat-card>
+      </li>
+    }
+  </ol>
+</section>
