@@ -91,6 +91,8 @@ export const RESUME: Resume = {
   languages: [
     { name: 'Deutsch', level: 'Muttersprache' },
     { name: 'Englisch', level: 'Verhandlungssicher' },
+    { name: 'Dari', level: 'Verhandlungssicher' },
+    { name: 'Russisch', level: 'Grundkenntnisse' },
   ],
   experience: [
     {
@@ -116,14 +118,14 @@ export const RESUME: Resume = {
     },
     {
       period: '2021 – 2023',
-      role: 'Flutter Developer (Flutter & Java)',
+      role: 'Fullstack Developer',
       company: 'VisualVest GmbH',
       summary:
         'Entwicklung einer Vertriebsplattform für Investmentfondsprodukte durch einen Robo-Advisor – Fragestrecke, Antragsstrecke, Kundendashboard und Transaktionsprozesse.',
     },
     {
       period: '2021 – 2022',
-      role: 'Flutter Developer & Scrum Master',
+      role: 'Fullstack Developer & Scrum Master',
       company: 'GLS Bank',
       summary:
         'Betreuung und Weiterentwicklung der Flutter App und des Java-Backends mit 50 % Scrum-Master-Anteil. Führung von 20 Projektmitgliedern und Unterstützung des Product Owners.',
@@ -142,7 +144,7 @@ export const RESUME: Resume = {
       role: 'Lead Flutter Developer',
       period: '06.2025 – heute',
       client: 'Fidelity Fondsbank',
-      title: 'Relaunch der Fidelity Fondsbank App',
+      title: 'Relaunch - Fidelity Fondsbank App',
       category: 'Mobile',
       summary:
         'Federführende Neukonzeption und technische Umsetzung der mobilen App – eine moderne, hoch performante Plattform zur Verwaltung von Fonds und zur detaillierten Depotanalyse.',
@@ -201,7 +203,7 @@ export const RESUME: Resume = {
       role: 'Senior Flutter Developer',
       period: '09.2022 – 09.2024',
       client: 'Union Investment',
-      title: 'Union Depot Online App – Relaunch',
+      title: 'Relaunch - Union Depot Online App',
       category: 'Mobile',
       summary:
         'Neuentwicklung der Union Depot Online App im Rahmen eines umfassenden Relaunches – modern, performant und benutzerfreundlich.',

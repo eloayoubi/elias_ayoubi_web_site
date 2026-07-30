@@ -33,7 +33,6 @@
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 0.9rem;
   font: var(--mat-sys-title-medium);
 }
 
@@ -47,6 +46,7 @@
   color: var(--mat-sys-on-primary);
   font: var(--mat-sys-label-large);
   letter-spacing: 0.03em;
+  margin-inline-end: 1rem;
 }
 
 .brand-name {
