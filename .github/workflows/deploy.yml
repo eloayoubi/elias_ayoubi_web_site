@@ -39,7 +39,7 @@ jobs:
         run: npx ng test --watch=false
 
       - name: Build (production)
-        run: npx ng build --configuration production --base-href /elias_ayoubi_web_site/
+        run: npx ng build --configuration production --base-href /
 
       - name: SPA fallback for GitHub Pages
         run: cp dist/elias-ayoubi-portfolio/browser/index.html dist/elias-ayoubi-portfolio/browser/404.html

@@ -2,7 +2,7 @@
 
 Persönliche Portfolio-Website von **Elias Ayoubi** – Senior IT-Berater & Lead Flutter Developer aus Darmstadt.
 
-**Live:** https://eloayoubi.github.io/elias_ayoubi_web_site/
+**Live:** https://eliasayoubi.de
 
 ## Tech-Stack
 
@@ -41,4 +41,4 @@ npm run build    # Produktions-Build nach dist/
 
 ## Deployment
 
-Jeder Push auf `main` löst den Workflow aus: `npm ci` → Tests → `ng build --base-href /elias_ayoubi_web_site/` → Deployment des `dist`-Outputs auf GitHub Pages (inkl. SPA-Fallback über `404.html`).
+Jeder Push auf `main` löst den Workflow aus: `npm ci` → Tests → `ng build --base-href /` → Deployment des `dist`-Outputs auf GitHub Pages (inkl. SPA-Fallback über `404.html`).
